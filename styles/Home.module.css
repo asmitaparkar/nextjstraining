@@ -2,6 +2,10 @@
   padding: 0 2rem;
 }
 
+.test{
+  background-color: aqua;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
