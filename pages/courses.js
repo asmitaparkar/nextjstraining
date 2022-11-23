@@ -1,5 +1,6 @@
 import React from "react";
 
+//SSG : Static site generation
 export const getStaticProps = async () => {
   //api call
   const response = await fetch("https://fakestoreapi.com/products");
