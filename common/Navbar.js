@@ -52,6 +52,16 @@ const Navbar = () => {
                   Product
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link href="/products" className="nav-link">
+                  Products
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/batches" className="nav-link">
+                  Batches
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

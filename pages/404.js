@@ -5,7 +5,7 @@ const NotFound = () => {
   useEffect(() => {
     
     setTimeout(()=>{
-        router.push("/");
+        // router.push("/");
     },3000)
   }, []);
   return <div>Page Not Found from MyApp</div>;

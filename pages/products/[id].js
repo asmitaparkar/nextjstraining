@@ -1,17 +1,23 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-// export const getServerSideProps = async () => {
-//     const response = await fetch("https://fakestoreapi.com/products");
-//     const products = await response.json();
-//     return {
-//       props: { productData: products },
-//     };
-//   };
+export const getServerSideProps = async (context) => {
+  // const router = useRouter(context);
+  // console.log(context);
+  const  id  = context.params.id;
+  // console.log('id'-id);
+    const response = await fetch("https://fakestoreapi.com/products/"+id);
+    const products = await response.json();
+    return {
+      props: { productData: products },
+    };
+  };
 
-const ProductId = (context) => {
-  const router = useRouter();
-  const { id } = router.query;
-  return <div>This is product page - {id}</div>;
+const ProductId = ({productData}) => {
+  console.log(productData);
+  // const router = useRouter();
+  // const { id } = router.query;
+  // console.log('id'-id);
+  return <div>This is product page - {productData.title}</div>;
 };
 export default ProductId;
