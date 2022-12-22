@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/product.scss'
 export const getServerSideProps = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
+    const response = await fetch(process.env.API_URL);
     const products = await response.json();
     return {
       props: { productData: products },
